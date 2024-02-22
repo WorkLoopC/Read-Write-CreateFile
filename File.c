@@ -1,4 +1,4 @@
-//File "name of file.db" than write cat "name of file.db"
+// ./File "name of file.db" than write cat "name of file.db"
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -10,13 +10,13 @@ if (argc != 2){
     printf("Usage: %s <filename> \n", argv[0]);
     return 0;
 }
-int fd=open(argv[1], O_RDWR | O_CREAT, 0644);
-if (fd==-1){
+int filedescriptor=open(argv[1], O_RDWR | O_CREAT, 0644);
+if (filedescriptor==-1){
     perror("open");
     return -1;
 }
 char *mydata ="Hello there file\n";
-write(fd,mydata,strlen(mydata));
-close (fd);
+write(filedescriptor,mydata,strlen(mydata));
+close (filedescriptor);
 return 0;
 }
