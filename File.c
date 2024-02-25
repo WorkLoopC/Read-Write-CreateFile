@@ -1,4 +1,3 @@
-// ./File "name of file.db" than write cat "name of file.db"
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
