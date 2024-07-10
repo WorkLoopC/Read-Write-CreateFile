@@ -14,7 +14,7 @@ if (filedescriptor==-1){
     perror("open");
     return -1;
 }
-char *mydata ="Hello there file\n";
+char *mydata ="Hello\n";
 write(filedescriptor,mydata,strlen(mydata));
 close (filedescriptor);
 return 0;
